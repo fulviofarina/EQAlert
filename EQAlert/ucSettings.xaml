@@ -1,0 +1,67 @@
+﻿<UserControl
+    x:Class="EQAlert.ucSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EQAlert"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="690" RenderTransformOrigin="0.5,0.5" Width="611.667">
+
+    <Grid Margin="10,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="690" VerticalAlignment="Top" Width="570" Margin="32,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85*" />
+                <RowDefinition Height="211*" />
+                <RowDefinition Height="128*" />
+                <RowDefinition Height="118*" />
+                <RowDefinition Height="125*" />
+                <RowDefinition Height="39*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="104*" />
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="checkEQ" Grid.Column="1" HorizontalAlignment="Left" Margin="20,8,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Height="32" Width="119" ToolTipService.ToolTip="in seconds" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="tilerefresh" Grid.Column="1" HorizontalAlignment="Left" Margin="21,49,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="1" ToolTipService.ToolTip="in minutes" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="mag" Grid.Column="1" HorizontalAlignment="Left" Margin="21,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="1" ToolTipService.ToolTip="Filter Tiles with Magnitude lower or equal than" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="radio" Grid.Column="1" HorizontalAlignment="Left" Margin="20,79,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="3" ToolTipService.ToolTip="Radio in kilometers" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="minToast" Grid.Column="1" HorizontalAlignment="Left" Margin="21,52,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Height="32" Width="119" ToolTipService.ToolTip="in seconds" Grid.Row="2" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="magToast" Grid.Column="1" HorizontalAlignment="Left" Margin="21,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="2" ToolTipService.ToolTip="Filter Alerts with Magnitude lower or equal than" TextChanged="EQ_TextChanged" />
+            <TextBox x:Name="lat" Grid.Column="1" HorizontalAlignment="Left" Margin="20,7,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="4" ToolTipService.ToolTip="Filter Alerts with Magnitude lower or equal than" />
+            <TextBox x:Name="lon" Grid.Column="1" HorizontalAlignment="Left" Margin="20,47,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="4" ToolTipService.ToolTip="Filter Alerts with Magnitude lower or equal than" />
+            <TextBox x:Name="accu" Grid.Column="1" HorizontalAlignment="Left" Margin="20,87,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="4" ToolTipService.ToolTip="Filter Alerts with Magnitude lower or equal than" />
+            <TextBlock HorizontalAlignment="Left" Margin="11,15,0,0" TextWrapping="Wrap" Text="Check for Earthquakes every" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" />
+            <TextBlock HorizontalAlignment="Left" Margin="14,57,0,0" TextWrapping="Wrap" Text="Filter alerts from the last" VerticalAlignment="Top" Height="32" Width="272" Foreground="#FFD7C3C3" FontSize="18" Grid.Row="2" />
+            <TextBlock HorizontalAlignment="Left" Margin="11,54,0,0" TextWrapping="Wrap" Text="Renew tiles every" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="1" />
+            <TextBlock HorizontalAlignment="Left" Margin="11,15,0,0" TextWrapping="Wrap" Text="Tile EQ's with Magnitude &gt;" VerticalAlignment="Top" Height="32" Width="293" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="1" />
+            <TextBlock HorizontalAlignment="Left" Margin="13,15,0,0" TextWrapping="Wrap" Text="Alert me of EQ's with Magnitude &gt;" VerticalAlignment="Top" Height="32" Width="292" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="2" />
+            <TextBlock HorizontalAlignment="Left" Margin="14,83,0,0" TextWrapping="Wrap" Text="Min. distance" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="3" />
+            <TextBlock HorizontalAlignment="Left" Margin="19,15,-14,0" TextWrapping="Wrap" Text="second(s)" VerticalAlignment="Top" Height="32" Width="99" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" />
+            <TextBlock HorizontalAlignment="Left" Margin="15,57,-10,0" TextWrapping="Wrap" Text="minute(s)" VerticalAlignment="Top" Height="32" Width="99" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="2" />
+            <TextBlock HorizontalAlignment="Left" Margin="18,57,-13,0" TextWrapping="Wrap" Text="minute(s)" VerticalAlignment="Top" Height="32" Width="99" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="1" />
+            <TextBlock HorizontalAlignment="Left" Margin="18,86,0,0" TextWrapping="Wrap" Text="km" VerticalAlignment="Top" Height="32" Width="65" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="3" />
+            <TextBlock HorizontalAlignment="Left" Margin="14,10,0,0" TextWrapping="Wrap" Text="Latitude" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="4" />
+            <TextBlock HorizontalAlignment="Left" Margin="13,50,0,0" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="4" />
+            <TextBlock HorizontalAlignment="Left" Margin="13,87,0,0" TextWrapping="Wrap" Text="Accuracy" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="4" />
+            <TextBlock HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="degrees N" VerticalAlignment="Top" Height="32" Width="84" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="4" />
+            <TextBlock HorizontalAlignment="Left" Margin="10,54,0,0" TextWrapping="Wrap" Text="degrees E" VerticalAlignment="Top" Height="32" Width="84" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="4" />
+            <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="meter(s)" VerticalAlignment="Top" Height="32" Width="84" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="4" Grid.RowSpan="2" />
+            <TextBlock x:Name="status" HorizontalAlignment="Left" Margin="11,12,0,-5" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Height="32" Width="256" Foreground="#FFDCC7C7" FontSize="18" Grid.Row="5" />
+            <TextBox x:Name="minAllSince" Grid.Column="1" HorizontalAlignment="Left" Margin="21,47,0,0" TextWrapping="Wrap" Text="1440" VerticalAlignment="Top" Height="32" Width="119" ToolTipService.ToolTip="in seconds" TextChanged="EQ_TextChanged" />
+            <TextBlock HorizontalAlignment="Left" Margin="14,52,0,0" TextWrapping="Wrap" Text="Filter all EQ's older than" VerticalAlignment="Top" Height="32" Width="272" Foreground="#FFD7C3C3" FontSize="18" />
+            <TextBlock HorizontalAlignment="Left" Margin="19,50,0,0" TextWrapping="Wrap" Text="minute(s)" VerticalAlignment="Top" Height="32" Width="75" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" />
+            <CheckBox x:Name="world" Content="Worldwide Earthquakes" Margin="14,11,28,82" Grid.Row="3" IsChecked="True" ClickMode="Press" Height="25" />
+            <CheckBox x:Name="near" Content="Only near me" HorizontalAlignment="Left" Margin="14,41,0,0" Grid.Row="3" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Width="143" Height="27" />
+            <CheckBox x:Name="noSound" Content="No sound please!" HorizontalAlignment="Left" Margin="10,91,0,0" Grid.Row="2" VerticalAlignment="Top" ClickMode="Press" IsChecked="False" Checked="near_Checked" Unchecked="near_Checked" Height="27" Width="143" />
+            <CheckBox x:Name="ordbyMag" Content="Tile by Magnitude order, not time" HorizontalAlignment="Left" Margin="14,91,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="False" Checked="near_Checked" Unchecked="near_Checked" Height="27" Width="272" />
+            <CheckBox x:Name="SIUnit" Content="Use the Internation System of Units" HorizontalAlignment="Left" Margin="14,128,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="False" Checked="near_Checked" Unchecked="near_Checked" Height="27" Width="272" />
+            <CheckBox x:Name="runbackbox" Content="Keep warning me! (runs in Background)" HorizontalAlignment="Left" Margin="14,165,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="False" Checked="near_Checked" Unchecked="near_Checked" Height="27" Width="290" />
+            <TextBox x:Name="runBkg" Grid.Column="1" HorizontalAlignment="Left" Margin="21,164,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Height="32" Width="119" Grid.Row="1" ToolTipService.ToolTip="in minutes" TextChanged="EQ_TextChanged" />
+            <TextBlock HorizontalAlignment="Left" Margin="15,169,-10,0" TextWrapping="Wrap" Text="minute(s)" VerticalAlignment="Top" Height="32" Width="99" Foreground="#FFDCC7C7" FontSize="18" Grid.Column="2" Grid.Row="1" />
+        </Grid>
+    </Grid>
+</UserControl>
